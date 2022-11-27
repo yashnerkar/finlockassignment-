@@ -58,7 +58,6 @@ const Home = () => {
 
   const handleSubmit = async () => {
     const res = await axios.post("/api/groups", groupName);
-    // console.log(res);
     dispatch(handleFilterData({ groups: res.data }));
   };
 

@@ -65,12 +65,11 @@ export default function BasicModal({ }) {
     return name;
   }
   const orgRows = organizations.map((org) => createData(org.orgName));
-  //   console.log("rows", rows);
-  // console.log("organizations", orgRows);
+
   const groups = useSelector((state) => state.reducer.initialData.groups);
-  // console.log("groups", groups);
+
   const groupRows = groups.map((group) => createData(group.categoryName));
-  // console.log("groupRows", groupRows);
+
 
   const submitData = async () => {
 

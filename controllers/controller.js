@@ -134,19 +134,19 @@ exports.login = async (req, res, next) => {
 
     const category =
         "CREATE TABLE IF NOT EXISTS category (categoryID INT AUTO_INCREMENT PRIMARY KEY, categoryName VARCHAR(255))";
-    connection.query(category, (err, res) => {
+    await connection.query(category, (err, res) => {
         if (err) throw err;
         // console.log("table2 created");
     });
     const organizations =
         "CREATE TABLE IF NOT EXISTS organizations(orgID INT AUTO_INCREMENT PRIMARY KEY, orgName VARCHAR(255))";
-    connection.query(organizations, function (err, res) {
+    await connection.query(organizations, function (err, res) {
         if (err) throw err;
         // console.log("table3 created");
     });
     const user =
         "CREATE TABLE IF NOT EXISTS users (userID INT AUTO_INCREMENT PRIMARY KEY, userName VARCHAR(255), categoryID INT,orgID INT,FOREIGN KEY(orgID) REFERENCES organizations(orgID),FOREIGN KEY(categoryID) REFERENCES category(categoryID))";
-    connection.query(user, function (err, res) {
+    await connection.query(user, function (err, res) {
         if (err) throw err;
         // console.log("table1 created");
     });
