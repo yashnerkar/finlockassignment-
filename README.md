@@ -1,7 +1,4 @@
-# finlockassignment-
-
-.
-
+### Finlock
 ## Installation
 
 Use the package manager npm
@@ -22,6 +19,10 @@ outside client folder : npm install
 
 To start the client : npm start
 To start the server : npm run dev
+
+Admin credentials: 
+email : admin@gmail.com
+password: admin
 
 ## License
 
